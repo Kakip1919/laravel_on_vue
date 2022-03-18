@@ -1,22 +1,20 @@
 <template>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
-
-                    <div class="card-body">
-                        I'm an example component.
-                    </div>
-                </div>
+            <h1>クォンサンウのもくもく会</h1>
+            <div class="row">
+                <label>メールアドレスを入力してね
+                    <input type="email" name="email" class="form-control">
+                </label>
+                <button type="submit">送信！</button>
             </div>
         </div>
     </div>
 </template>
 <script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
+export default {
+    mounted() {
+        console.log('Component mounted.')
     }
+}
 </script>

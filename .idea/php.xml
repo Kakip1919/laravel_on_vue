@@ -114,6 +114,9 @@
       <path value="$PROJECT_DIR$/laravel_test/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/laravel_test/vendor/fakerphp/faker" />
       <path value="$PROJECT_DIR$/laravel_test/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/laravel_test/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/laravel_test/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/laravel_test/vendor/barryvdh/laravel-debugbar" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

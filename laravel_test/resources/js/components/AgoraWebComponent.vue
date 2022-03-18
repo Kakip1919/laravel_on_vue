@@ -29,7 +29,7 @@ export default {
 
     client.init("aaac7624c64348699a189ddc728ba18f");
 
-    client.join("006aaac7624c64348699a189ddc728ba18fIAD8AOjkPqTuF8NynFf1461M/9QQM8snCV24Qg2BQgz3PHe3Y70AAAAAEADjTvSOdboyYgEAAQB0ujJi", "demko", null, () => {
+    client.join("006aaac7624c64348699a189ddc728ba18fIACjZm9LOkm93unxUzhoWRxZFW14IuOyGU+MIMo2An+S/aDfQtYAAAAAEADjTvSOl0I0YgEAAQCXQjRi", "demo", null, () => {
       localStream.init(() => {
         localStream.play("me");
         client.publish(localStream, handleError);
