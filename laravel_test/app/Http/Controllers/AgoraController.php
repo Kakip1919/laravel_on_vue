@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Admin;
 use App\Models\Agora;
+use App\Models\ChatList;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -87,5 +88,19 @@ class AgoraController extends Controller
         ]);
         $posts = json_decode($response->getBody(),true);
         return $posts["data"];
+    }
+    public function chat_store(Request $request){
+        $list = [];
+        $response = $request->all();
+        foreach($response as $res){
+            $list[] = $res;
+        }
+        $store_db = new ChatList();
+        $store_db->mail_address = $list[0];
+        $store_db->message = $list[1];
+        $store_db->app_id = $list[2];
+        $store_db->channel_name = $list[3];
+        $store_db->save();
+        return $list;
     }
 }

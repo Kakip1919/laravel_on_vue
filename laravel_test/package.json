@@ -27,6 +27,8 @@
         "agora-rtc-sdk": "^3.6.9",
         "agora-rtc-sdk-ng": "^4.10.1",
         "bootstrap-vue": "^2.21.2",
+        "file-saver": "^2.0.5",
+        "identicon.js": "^2.3.3",
         "laravel-echo": "^1.11.4",
         "pusher-js": "^7.0.6"
     }
