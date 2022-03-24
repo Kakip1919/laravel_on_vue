@@ -15,6 +15,9 @@ class CreateUsersInfoTable extends Migration
     {
         Schema::create('users_info', function (Blueprint $table) {
             $table->id();
+            $table->text("mail_address")->unique();
+            $table->text("change_strings_to_hash");
+            $table->text("channel_name")->nullable();
             $table->timestamps();
         });
     }
