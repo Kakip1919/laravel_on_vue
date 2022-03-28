@@ -18,7 +18,7 @@ class CreateChatListsTable extends Migration
             $table->text("room_id")->nullable();
             $table->text("app_id");
             $table->text("token")->nullable();
-            $table->text("message")->default("");
+            $table->text("message")->nullable();
             $table->text("channel_name");
             $table->text("mail_address");
             $table->timestamps();

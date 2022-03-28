@@ -32,7 +32,7 @@ class AgoraController extends Controller
                 "0a84e6b5bb5243cab70a3320a5ccb763"
             ]
         ]);
-        $posts = json_decode($response->getBody(),true);
+        $posts = json_decode($response->getBody(), true);
         $user_list = $posts["data"];
         $db_key = $room_key->app_id . "," . $user_info->channel_name;
         if (md5($db_key) === $hash_key && $request->session()->get("auth_user") === true) {
@@ -86,13 +86,15 @@ class AgoraController extends Controller
                 "0a84e6b5bb5243cab70a3320a5ccb763"
             ]
         ]);
-        $posts = json_decode($response->getBody(),true);
+        $posts = json_decode($response->getBody(), true);
         return $posts["data"];
     }
-    public function chat_store(Request $request){
+
+    public function chat_store(Request $request)
+    {
         $list = [];
         $response = $request->all();
-        foreach($response as $res){
+        foreach ($response as $res) {
             $list[] = $res;
         }
         $store_db = new ChatList();
@@ -102,5 +104,12 @@ class AgoraController extends Controller
         $store_db->channel_name = $list[3];
         $store_db->save();
         return $list;
+    }
+
+    public function store_img(Request $request)
+    {
+        $file_name = $request->file('file')->getClientOriginalName();
+        $request->file('file')->storeAs("public", $file_name);
+        return $file_name;
     }
 }

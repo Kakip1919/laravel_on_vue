@@ -10,6 +10,7 @@ Route::get("/channel_detail/{id}", "App\\Http\\Controllers\\AgoraController@chan
 Route::get("/stand_by_room/{id}", "App\\Http\\Controllers\\AgoraController@stand_by_room")->name("agora_room.stand_by_room");
 Route::get("/get_api/{channel_name}", "App\\Http\\Controllers\\AgoraController@get_api")->name("get_api");
 Route::post("/chat_store", "App\\Http\\Controllers\\AgoraController@chat_store")->name("chat_store");
+Route::post("/store_img", "App\\Http\\Controllers\\AgoraController@store_img")->name("store_img");
 
 
 Route::prefix('admin')->group(function () {
